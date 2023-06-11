@@ -9,6 +9,7 @@ import Home from './screens/Main/home';
 import TabNavigationBar from './navigation/TabNavigationBar';
 import Login from './screens/Login';
 import SignUp from './screens/Register Page';
+import ResetPW from './screens/ResetPW';
 
 const PrimaryNavigator = createStackNavigator();
 
@@ -23,6 +24,7 @@ class App extends Component {
           <PrimaryNavigator.Screen name="TabNavigationBar" component={TabNavigationBar} />
           <PrimaryNavigator.Screen name="Login" component={Login} />
           <PrimaryNavigator.Screen name="SignUp" component={SignUp} />
+          <PrimaryNavigator.Screen name="ResetPW" component={ResetPW} />
         </PrimaryNavigator.Navigator>
       </NavigationContainer>
     );

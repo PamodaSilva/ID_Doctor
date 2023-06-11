@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet, Alert } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Alert , TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Text } from 'react-native-paper';
 
 const LoginScreen = () => {
     const navigation = useNavigation();
@@ -30,6 +31,10 @@ const LoginScreen = () => {
     navigation.navigate('SignUp');
   };
 
+  const handleRestPW = () => {
+    navigation.navigate('ResetPW');
+  };
+
   return (
     <View style={styles.container}>
       <TextInput
@@ -47,6 +52,10 @@ const LoginScreen = () => {
       />
       <Button title="Login" onPress={handleLogin} />
       <Button title="Sign Up" onPress={handleSignUp} />
+      <TouchableOpacity onPress={handleRestPW}>
+        <Text> Reset Password </Text>
+      </TouchableOpacity>
+
     </View>
   );
 };
