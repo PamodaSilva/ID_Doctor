@@ -1,27 +1,23 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import React, {Component} from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import SplashScreen from '../app/screens/SplashScreen';
+import Home from '../app/screens/home';
 
-const App = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello, React Native! </Text>
-      <Text style={styles.text}>Hello, React Native!... </Text>
-    </View>
-  );
-};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-});
+const PrimaryNavigator = createStackNavigator();
+class App extends Component {
+    render() {
+        return (
+            <NavigationContainer>
+                <PrimaryNavigator.Navigator headerMode={{}} initialRouteName="SplashScreen">
+                    <PrimaryNavigator.Screen name="SplashScreen" component={SplashScreen} />
+                    <PrimaryNavigator.Screen name="Home" component={Home}/>
+                </PrimaryNavigator.Navigator>
+            </NavigationContainer>
+        );
+    }
+}
 
 export default App;
