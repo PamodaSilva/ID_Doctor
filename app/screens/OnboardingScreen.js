@@ -2,53 +2,52 @@
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Swiper from 'react-native-swiper';
+import { useNavigation } from '@react-navigation/native';
 
-export default class OnboardingScreen extends Component {
-  handleSkip = () => {
+export default function OnboardingScreen() {
+  const navigation = useNavigation();
 
-    this.props.navigation.navigate('Home');
+  const handleSkip = () => {
+    navigation.navigate('Home');
   };
 
-  handleDone = () => {
-
-    this.props.navigation.navigate('Home');
+  const handleDone = () => {
+    navigation.navigate('Home');
   };
 
-  render() {
-    const slides = [
-      {
-        title: 'Welcome to the App',
-        description: 'This is an onboarding screen for your app.',
-        image: require('../assets/Doc.png'),
-      },
-      {
-        title: 'Feature 1',
-        description: 'Describe the first feature of your app.',
-        image: require('../assets/Doc.png'),
-      },
-      // Add more slides as needed
-    ];
+  const slides = [
+    {
+      title: 'Welcome to the App',
+      description: 'This is an onboarding screen for your app.',
+      image: require('../assets/Doc.png'),
+    },
+    {
+      title: 'Feature 1',
+      description: 'Describe the first feature of your app.',
+      image: require('../assets/Doc.png'),
+    },
+    // Add more slides as needed
+  ];
 
-    return (
-      <View style={styles.container}>
-        <Swiper loop={false}>
-          {slides.map((slide, index) => (
-            <View key={index} style={styles.slideContainer}>
-              <Image source={slide.image} style={styles.image} />
-              <Text style={styles.title}>{slide.title}</Text>
-              <Text style={styles.description}>{slide.description}</Text>
-            </View>
-          ))}
-        </Swiper>
-        <TouchableOpacity style={styles.skipButton} onPress={this.handleSkip}>
-          <Text style={styles.buttonText}>Skip</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.doneButton} onPress={this.handleDone}>
-          <Text style={styles.buttonText}>Done</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
+  return (
+    <View style={styles.container}>
+      <Swiper loop={false}>
+        {slides.map((slide, index) => (
+          <View key={index} style={styles.slideContainer}>
+            <Image source={slide.image} style={styles.image} />
+            <Text style={styles.title}>{slide.title}</Text>
+            <Text style={styles.description}>{slide.description}</Text>
+          </View>
+        ))}
+      </Swiper>
+      <TouchableOpacity style={styles.skipButton} onPress={handleSkip}>
+        <Text style={styles.buttonText}>Skip</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.doneButton} onPress={handleDone}>
+        <Text style={styles.buttonText}>Done</Text>
+      </TouchableOpacity>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
