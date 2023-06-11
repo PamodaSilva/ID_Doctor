@@ -26,6 +26,10 @@ const LoginScreen = () => {
     }
   };
 
+  const handleSignUp = () => {
+    navigation.navigate('SignUp');
+  };
+
   return (
     <View style={styles.container}>
       <TextInput
@@ -42,6 +46,7 @@ const LoginScreen = () => {
         value={password}
       />
       <Button title="Login" onPress={handleLogin} />
+      <Button title="Sign Up" onPress={handleSignUp} />
     </View>
   );
 };

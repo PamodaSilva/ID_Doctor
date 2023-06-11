@@ -8,6 +8,7 @@ import OnboardingScreen from './screens/OnboardingScreen';
 import Home from './screens/Main/home';
 import TabNavigationBar from './navigation/TabNavigationBar';
 import Login from './screens/Login';
+import SignUp from './screens/Register Page';
 
 const PrimaryNavigator = createStackNavigator();
 
@@ -21,6 +22,7 @@ class App extends Component {
           <PrimaryNavigator.Screen name="Home" component={Home} />
           <PrimaryNavigator.Screen name="TabNavigationBar" component={TabNavigationBar} />
           <PrimaryNavigator.Screen name="Login" component={Login} />
+          <PrimaryNavigator.Screen name="SignUp" component={SignUp} />
         </PrimaryNavigator.Navigator>
       </NavigationContainer>
     );
