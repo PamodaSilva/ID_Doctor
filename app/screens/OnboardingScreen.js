@@ -8,11 +8,11 @@ export default function OnboardingScreen() {
   const navigation = useNavigation();
 
   const handleSkip = () => {
-    navigation.navigate('Home');
+    navigation.navigate('Login');
   };
 
   const handleDone = () => {
-    navigation.navigate('Home');
+    navigation.navigate('Login');
   };
 
   const slides = [
