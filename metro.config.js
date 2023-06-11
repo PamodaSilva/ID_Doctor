@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /**
  * Metro configuration for React Native
  * https://github.com/facebook/react-native
@@ -13,5 +14,8 @@ module.exports = {
         inlineRequires: true,
       },
     }),
+  },
+  resolver: {
+    sourceExts: ['jsx', 'js', 'ts', 'tsx'], // Add any other extensions you're using
   },
 };

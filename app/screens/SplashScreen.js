@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
 import { View, Image, StyleSheet} from 'react-native';
-import Home from '../screens/home';
+import OnboardingScreen from '../screens/OnboardingScreen';
 
 export default class App extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ export default class App extends Component {
     // Simulating a delay of 3 seconds for demonstration purposes
     setTimeout(() => {
       this.setState({ isLoaded: true });
-    }, 3000);
+    }, 2500);
   }
 
   render() {
@@ -36,7 +36,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <>
-        <Home/>
+        <OnboardingScreen/>
         </>
       </View>
     );
