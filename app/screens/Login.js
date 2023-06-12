@@ -12,18 +12,22 @@ const LoginScreen = () => {
 
   const handleLogin = () => {
     if   (!email && !password ){
-        Alert.alert(' Error!..', 'Your are not fill the Username or Password  !!', [
-            {text: 'ok.'},
-          ]);
+      Alert.alert(' Error!..', 'Your are not fill the Username or Password  !!', [
+        {text: 'ok.'},
+      ]);
     } else if (email === 'admin' && password === '123'){
-        Alert.alert('Success!..', ' Login successfully !!', [
-            {text: 'ok.'},
-          ]);
+      setEmail('');
+      setPassword('');
+      Alert.alert('Success!..', ' Login successfully !!', [
+        {text: 'ok.'},
+      ]);
           navigation.navigate('Home');
     } else {
-        Alert.alert('Not Success!..', ' Login not successfully !!', [
-            {text: 'ok.'},
-          ]);
+      setEmail('');
+      setPassword('');
+      Alert.alert('Not Success!..', ' Login not successfully !!', [
+        {text: 'ok.'},
+      ]);
     }
   };
 
@@ -82,12 +86,12 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '80%',
-    height: 40,
+    height: 45,
     marginBottom: 12,
     borderWidth: 1,
     borderColor: 'black',
     borderRadius: 4,
-    paddingLeft: 8,
+    paddingLeft: 10,
     bottom:45,
     fontSize: 15.5,
   },
