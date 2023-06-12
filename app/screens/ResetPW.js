@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { View, TextInput, Button, Alert, StyleSheet } from 'react-native';
+import { Text, View, TextInput, Button, Alert, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const ResetPasswordPage = () => {
@@ -28,6 +28,8 @@ const ResetPasswordPage = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.ResetMainText}> Reset Your Password </Text>
+      <Image source={require('../assets/ResetPW.png')} style={styles.ResetPWImage} />
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -59,15 +61,30 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
+    backgroundColor: 'white',
+  },
+  ResetMainText: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: 'black',
+    top: -40,
+  },
+  ResetPWImage: {
+    width: 300,
+    height: 300,
+    resizeMode: 'contain',
+    top: -30,
   },
   input: {
-    width: '100%',
+    width: '80%',
     height: 40,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: 'black',
     borderRadius: 4,
     paddingLeft: 8,
+    fontSize: 14,
+    top: -20,
   },
 });
 
