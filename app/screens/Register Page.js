@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet , Alert} from 'react-native';
+import { Text,View, TextInput, Button, StyleSheet , Alert, Image} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const SignupScreen = () => {
@@ -30,6 +30,8 @@ const SignupScreen = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.RMainText}> Reset Your Password </Text>
+      <Image source={require('../assets/Register.png')} style={styles.ReImage} />
       <TextInput
         style={styles.input}
         placeholder="Name"
@@ -67,15 +69,29 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
+    backgroundColor: 'white',
+  },
+  RMainText: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: 'black',
+    top: -50,
+  },
+  ReImage: {
+    width: 220,
+    height: 220,
+    resizeMode: 'contain',
+    top: -25,
   },
   input: {
-    width: '100%',
-    height: 40,
-    marginBottom: 12,
+    width: '85%',
+    height: 50,
+    marginBottom: 15,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: 'black',
     borderRadius: 4,
     paddingLeft: 8,
+    bottom: 10,
   },
 });
 
