@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     paddingLeft: 8,
     bottom:45,
+    fontSize: 15.5,
   },
   LoginImage: {
     width: 330,
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
   },
   LogButton: {
     bottom: 30,
-    fontSize: 20,
+    fontSize: 20.5,
     borderWidth: 1,
     backgroundColor: '#87CEFA',
     borderRadius: 5,

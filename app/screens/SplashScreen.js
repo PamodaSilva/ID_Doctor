@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#87CEFA',
+    backgroundColor: '#69E2FF',
   },
   splash_heading: {
     fontSize: 50,
