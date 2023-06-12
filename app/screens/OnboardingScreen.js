@@ -17,16 +17,20 @@ export default function OnboardingScreen() {
 
   const slides = [
     {
-      title: 'Welcome to the App',
-      description: 'This is an onboarding screen for your app.',
-      image: require('../assets/Doc.png'),
+      title: ' We are here to help ',
+      description: 'Welcome to the App! We are here to help predict Infectious diseases ',
+      image: require('../assets/Onboarding1.png'),
     },
     {
-      title: 'Feature 1',
+      title: 'Give Your Symptoms',
       description: 'Describe the first feature of your app.',
-      image: require('../assets/Doc.png'),
+      image: require('../assets/Onboarding2.png'),
     },
-    // Add more slides as needed
+    {
+      title: 'Predict Infectious Disease',
+      description: 'Describe the first feature of your app.',
+      image: require('../assets/Onboarding3.png'),
+    },
   ];
 
   return (
@@ -53,7 +57,7 @@ export default function OnboardingScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#FFFF',
   },
   slideContainer: {
     flex: 1,
@@ -61,14 +65,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   image: {
-    width: 200,
-    height: 200,
+    width: 350,
+    height: 350,
     resizeMode: 'contain',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
+    color: 'black',
   },
   description: {
     fontSize: 16,
@@ -88,6 +93,6 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: 'blue',
+    color: '#00008B',
   },
 });

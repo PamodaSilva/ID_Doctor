@@ -45,13 +45,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(50, 125, 255, 0.2)',
+    backgroundColor: '#87CEFA',
   },
   splash_heading: {
     fontSize: 50,
     bottom: 10,
-    color: '#1E90FF',
     fontWeight: 'bold',
+    color: 'black',
   },
   splashImage: {
     width: 420,
