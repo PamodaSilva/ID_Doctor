@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet, Alert , TouchableOpacity} from 'react-native';
+import { Image, View, TextInput, Button, StyleSheet, Alert , TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Text } from 'react-native-paper';
 
@@ -37,6 +37,8 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.MainText}> LogIn </Text>
+      <Image source={require('../assets/LogIn.png')} style={styles.LoginImage} />
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -50,12 +52,18 @@ const LoginScreen = () => {
         onChangeText={setPassword}
         value={password}
       />
-      <Button title="Login" onPress={handleLogin} />
-      <Button title="Sign Up" onPress={handleSignUp} />
-      <TouchableOpacity onPress={handleRestPW}>
-        <Text> Reset Password </Text>
+      <TouchableOpacity onPress={handleLogin}>
+        <Text style={styles.LogButton}> Login </Text>
       </TouchableOpacity>
-
+      <View style={styles.container1}>
+        <TouchableOpacity onPress={handleRestPW}>
+          <Text style={styles.ResetButton}> Reset Password </Text>
+        </TouchableOpacity>
+      </View>
+      <Text style={styles.Text1}> Your haven't an Account  </Text>
+      <TouchableOpacity onPress={handleSignUp}>
+        <Text style={styles.SignUP}> Sign Up </Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -67,14 +75,52 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
   },
+  MainText: {
+    fontSize: 35,
+    top: -35,
+    fontWeight: 'bold',
+  },
   input: {
-    width: '100%',
+    width: '80%',
     height: 40,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: 'black',
     borderRadius: 4,
     paddingLeft: 8,
+    bottom:45,
+  },
+  LoginImage: {
+    width: 330,
+    height: 330,
+    resizeMode: 'contain',
+    bottom: 50,
+  },
+  LogButton: {
+    bottom: 30,
+    fontSize: 20,
+    borderWidth: 1,
+    backgroundColor: '#87CEFA',
+    borderRadius: 5,
+    marginRight: 250,
+  },
+  ResetButton: {
+    top: -50,
+    fontSize: 16,
+    textDecorationLine: 'underline',
+    marginLeft: 200,
+  },
+  Text1: {
+    marginRight: 120,
+    fontSize: 18,
+    top: -10,
+  },
+  SignUP: {
+    marginLeft: 140,
+    fontSize:15,
+    color: 'blue',
+    textDecorationLine: 'underline',
+    top: -10,
   },
 });
 
