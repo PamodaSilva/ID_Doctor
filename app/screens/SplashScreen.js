@@ -1,22 +1,17 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
-import { View, Image, StyleSheet} from 'react-native';
+import { View, Image, StyleSheet, Text} from 'react-native';
 import OnboardingScreen from '../screens/OnboardingScreen';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoaded: false, // Flag to determine if the necessary tasks are completed
+      isLoaded: false,
     };
   }
 
   componentDidMount() {
-    // Perform any necessary tasks while the splash screen is displayed, such as data loading or app initialization.
-    // You can use the `componentDidMount` lifecycle method to define the necessary logic.
-    // Once you're done, update the state to indicate that the tasks are completed.
-
-    // Simulating a delay of 3 seconds for demonstration purposes
     setTimeout(() => {
       this.setState({ isLoaded: true });
     }, 2500);
@@ -28,7 +23,9 @@ export default class App extends Component {
     if (!isLoaded) {
       return (
         <View style={styles.splashContainer}>
-          <Image source={require('../assets/Doc.png')} style={styles.splashImage} />
+          <Text style={styles.splash_heading}> ID-Doctor </Text>
+          <Image source={require('../assets/Doctor.png')} style={styles.splashImage} />
+          <Text style={styles.splashText}> - Prediction Infectious Disease - </Text>
         </View>
       );
     }
@@ -48,12 +45,23 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(50, 125, 255, 0.2)',
+  },
+  splash_heading: {
+    fontSize: 50,
+    bottom: 10,
+    color: '#1E90FF',
+    fontWeight: 'bold',
   },
   splashImage: {
-    width: 200,
-    height: 200,
+    width: 420,
+    height: 420,
     resizeMode: 'contain',
+  },
+  splashText: {
+    fontSize: 20,
+    fontStyle: 'italic',
+    color: 'black',
   },
   container: {
     flex: 1,
