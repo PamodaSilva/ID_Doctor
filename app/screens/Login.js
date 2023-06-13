@@ -21,7 +21,7 @@ const LoginScreen = () => {
       Alert.alert('Success!..', ' Login successfully !!', [
         {text: 'ok.'},
       ]);
-          navigation.navigate('DocChat');
+          navigation.navigate('Profile');
     } else {
       setEmail('');
       setPassword('');

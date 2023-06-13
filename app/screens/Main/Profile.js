@@ -10,11 +10,8 @@ const ProfilePage = () => {
     <LinearGradient
           colors={['#B7E9F7', '#92DFF3', '#7AD7F0' ]}
           style={styles.linearGradient}>
-
-      <Image
-        source={require('../../assets/Person.png')}
-        style={styles.profilePicture}
-      />
+      <Text style={styles.MainTx}> MY PROFILE </Text>
+      <Image source={require('../../assets/Person.png')} style={styles.profilePicture} />
       <Text style={styles.name}>Name :-  John Doe</Text>
       <Text style={styles.email}>Email :-  john.doe@example.com</Text>
       <Text style={styles.bioText}> My Bio :- </Text>
@@ -39,6 +36,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: 1000,
     width: 450,
+  },
+  MainTx: {
+    fontSize: 35,
+    color: '#00008D',
+    bottom: 52,
+    fontWeight: '500',
+    fontStyle: 'italic',
   },
   profilePicture: {
     width: 150,

@@ -46,7 +46,7 @@ const DoctorChatPage = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.CText}> Chat With Doctor</Text>
+      <Text style={styles.CText}> CHAT WITH DOCTOR</Text>
       <FlatList
         style={styles.chatContainer}
         data={messages}
@@ -80,8 +80,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 30,
     color: 'black',
-    top: 10,
+    top: 8,
     fontWeight: 'bold',
+    fontStyle: 'italic',
   },
   inputContainer: {
     flexDirection: 'row',
