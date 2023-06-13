@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-// #29C5F6', '#3A9BDC', '#5579C6', '#1260CC'
+
 
 const ProfilePage = () => {
   return (
@@ -15,11 +15,9 @@ const ProfilePage = () => {
         source={require('../../assets/Person.png')}
         style={styles.profilePicture}
       />
-      <Text style={styles.name}>Name: John Doe</Text>
-      <Text style={styles.email}>Email: john.doe@example.com</Text>
-      <Text style={styles.bioText}>
-          My Bio:
-      </Text>
+      <Text style={styles.name}>Name :-  John Doe</Text>
+      <Text style={styles.email}>Email :-  john.doe@example.com</Text>
+      <Text style={styles.bioText}> My Bio :- </Text>
       <TextInput style={styles.bio} placeholder="Bio" secureTextEntry />
       <TouchableOpacity>
         <Text style={styles.EProfile}> EDIT PROFILE </Text>
@@ -60,7 +58,7 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   bioText: {
-    fontSize: 16,
+    fontSize: 20,
     color: 'black',
     marginTop: 20,
     marginBottom : 50,

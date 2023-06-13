@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { View, Image, StyleSheet, Text} from 'react-native';
 import OnboardingScreen from '../screens/OnboardingScreen';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default class App extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ export default class App extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ isLoaded: true });
-    }, 2500);
+    }, 3000);
   }
 
   render() {
@@ -23,9 +24,12 @@ export default class App extends Component {
     if (!isLoaded) {
       return (
         <View style={styles.splashContainer}>
-          <Text style={styles.splash_heading}> ID-Doctor </Text>
-          <Image source={require('../assets/Doctor.png')} style={styles.splashImage} />
-          <Text style={styles.splashText}> - Prediction Infectious Disease - </Text>
+          <LinearGradient colors={['#29C5F6', '#3A9BDC', '#5579C6', '#1260CC' ]}
+          style={styles.linearGradient}>
+            <Text style={styles.splash_heading}> ID-Doctor </Text>
+            <Image source={require('../assets/Doctor.png')} style={styles.splashImage} />
+            <Text style={styles.splashText}> - Prediction Infectious Disease - </Text>
+          </LinearGradient>
         </View>
       );
     }
@@ -45,28 +49,34 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#69E2FF',
   },
   splash_heading: {
-    fontSize: 50,
+    fontSize: 55,
     bottom: 10,
     fontWeight: 'bold',
     color: 'black',
   },
   splashImage: {
-    width: 420,
-    height: 420,
+    width: 380,
+    height: 380,
     resizeMode: 'contain',
   },
   splashText: {
-    fontSize: 20,
+    fontSize: 22,
     fontStyle: 'italic',
     color: 'black',
+    top: 10,
   },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
+  },
+  linearGradient: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 1000,
+    width: 450,
   },
 });
