@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { Image, View, TextInput, Button, StyleSheet, Alert , TouchableOpacity} from 'react-native';
+import { Image, View, TextInput, StyleSheet, Alert , TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Text } from 'react-native-paper';
 
@@ -21,7 +21,7 @@ const LoginScreen = () => {
       Alert.alert('Success!..', ' Login successfully !!', [
         {text: 'ok.'},
       ]);
-          navigation.navigate('Profile');
+          navigation.navigate('DocChat');
     } else {
       setEmail('');
       setPassword('');
