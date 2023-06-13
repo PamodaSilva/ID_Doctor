@@ -9,7 +9,7 @@ import Home from './screens/Main/home';
 import DocChat from './screens/Main/DocChat';
 import PredictDisease from './screens/Main/PredictDisease';
 import Profile from './screens/Main/Profile';
-import TabNavigationBar from './navigation/TabNavigationBar';
+//import TabNavigationBar from './navigation/TabNavigationBar';
 import Login from './screens/Login';
 import SignUp from './screens/Register Page';
 import ResetPW from './screens/ResetPW';
@@ -27,7 +27,6 @@ class App extends Component {
           <PrimaryNavigator.Screen name="DocChat" component={DocChat} />
           <PrimaryNavigator.Screen name="PredictDisease" component={PredictDisease} />
           <PrimaryNavigator.Screen name="Profile" component={Profile} />
-          <PrimaryNavigator.Screen name="TabNavigationBar" component={TabNavigationBar} />
           <PrimaryNavigator.Screen name="Login" component={Login} />
           <PrimaryNavigator.Screen name="SignUp" component={SignUp} />
           <PrimaryNavigator.Screen name="ResetPW" component={ResetPW} />
