@@ -56,8 +56,8 @@ const LoginScreen = () => {
         onChangeText={setPassword}
         value={password}
       />
-      <TouchableOpacity onPress={handleLogin}>
-        <Text style={styles.LogButton}> Login </Text>
+      <TouchableOpacity onPress={handleLogin} style={styles.LogButton}>
+        <Text style= {{fontSize: 20, textAlign: 'center'}}> Login </Text>
       </TouchableOpacity>
       <View style={styles.container1}>
         <TouchableOpacity onPress={handleRestPW}>
@@ -103,14 +103,14 @@ const styles = StyleSheet.create({
   },
   LogButton: {
     bottom: 30,
-    fontSize: 20.5,
     borderWidth: 1,
     backgroundColor: '#87CEFA',
     borderRadius: 5,
-    marginRight: 250,
+    height: 37,
+    width: 130,
   },
   ResetButton: {
-    top: -50,
+    top: -25,
     fontSize: 16,
     textDecorationLine: 'underline',
     marginLeft: 200,
