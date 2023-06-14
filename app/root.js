@@ -8,6 +8,7 @@ import OnboardingScreen from './screens/OnboardingScreen';
 import Home from './screens/Main/home';
 import DocChat from './screens/Main/DocChat';
 import PredictDisease from './screens/Main/PredictDisease';
+import PredictDisease2 from './screens/Main/PredictDisease2';
 import Profile from './screens/Main/Profile';
 //import TabNavigationBar from './navigation/TabNavigationBar';
 import Login from './screens/Login';
@@ -26,6 +27,7 @@ class App extends Component {
           <PrimaryNavigator.Screen name="Home" component={Home} />
           <PrimaryNavigator.Screen name="DocChat" component={DocChat} />
           <PrimaryNavigator.Screen name="PredictDisease" component={PredictDisease} />
+          <PrimaryNavigator.Screen name="PredictDisease2" component={PredictDisease2} />
           <PrimaryNavigator.Screen name="Profile" component={Profile} />
           <PrimaryNavigator.Screen name="Login" component={Login} />
           <PrimaryNavigator.Screen name="SignUp" component={SignUp} />

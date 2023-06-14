@@ -21,7 +21,7 @@ const LoginScreen = () => {
       Alert.alert('Success!..', ' Login successfully !!', [
         {text: 'ok.'},
       ]);
-          navigation.navigate('Profile');
+          navigation.navigate('PredictDisease');
     } else {
       setEmail('');
       setPassword('');
@@ -65,7 +65,7 @@ const LoginScreen = () => {
         </TouchableOpacity>
       </View>
       <Text style={styles.Text1}> Your haven't an Account  </Text>
-      <TouchableOpacity onPress={handleSignUp}>
+      <TouchableOpacity onPress={handleSignUp} >
         <Text style={styles.SignUP}> Sign Up </Text>
       </TouchableOpacity>
     </View>
