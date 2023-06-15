@@ -46,6 +46,7 @@ const DoctorChatPage = () => {
 
   return (
     <View style={styles.container}>
+      <Text style= {{textAlign: 'center', fontSize: 20, color: 'black', top: 10}}> Future Development Part </Text>
       <Text style={styles.CText}> CHAT WITH DOCTOR</Text>
       <FlatList
         style={styles.chatContainer}

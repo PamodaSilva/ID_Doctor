@@ -3,7 +3,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-
 const ProfilePage = () => {
   return (
     <View style={styles.container}>
@@ -12,10 +11,12 @@ const ProfilePage = () => {
           style={styles.linearGradient}>
       <Text style={styles.MainTx}> MY PROFILE </Text>
       <Image source={require('../../assets/Person.png')} style={styles.profilePicture} />
+      <View style={styles.View1}>
       <Text style={styles.name}>Name :-  John Doe</Text>
       <Text style={styles.email}>Email :-  john.doe@example.com</Text>
       <Text style={styles.bioText}> My Bio :- </Text>
       <TextInput style={styles.bio} placeholder="Bio" secureTextEntry />
+      </View>
       <TouchableOpacity>
         <Text style={styles.EProfile}> EDIT PROFILE </Text>
       </TouchableOpacity>
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   MainTx: {
     fontSize: 35,
     color: '#00008D',
-    bottom: 52,
+    bottom: 40,
     fontWeight: '500',
     fontStyle: 'italic',
   },
@@ -49,6 +50,13 @@ const styles = StyleSheet.create({
     height: 150,
     borderRadius: 75,
     marginBottom: 16,
+    top: -20,
+  },
+  View1: {
+    backgroundColor: '#ffff',
+    padding: 30,
+    borderRadius:15,
+    top: -12,
   },
   name: {
     fontSize: 20,
@@ -64,10 +72,8 @@ const styles = StyleSheet.create({
   bioText: {
     fontSize: 20,
     color: 'black',
-    marginTop: 20,
-    marginBottom : 50,
-    marginLeft: 38,
-    marginRight: 30,
+    marginTop: 10,
+    marginBottom : 40,
     textAlign: 'left',
   },
   EProfile: {
@@ -75,16 +81,16 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 5,
     color: 'blue',
+    top: 10,
   },
   bio: {
-    width: '78%',
     height: 100,
     marginBottom: 12,
     borderWidth: 1,
     borderColor: 'black',
     borderRadius: 4,
     paddingLeft: 10,
-    bottom:45,
+    bottom:30,
     fontSize: 15.5,
   },
 });

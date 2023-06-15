@@ -15,7 +15,7 @@ const LoginScreen = () => {
       Alert.alert(' Error!..', 'Your are not fill the Username or Password  !!', [
         {text: 'ok.'},
       ]);
-    } else if (email === 'admin' && password === '123'){
+    } else if (email === 'admin@gmail.com' && password === '123'){
       setEmail('');
       setPassword('');
       Alert.alert('Success!..', ' Login successfully !!', [
@@ -57,7 +57,7 @@ const LoginScreen = () => {
         value={password}
       />
       <TouchableOpacity onPress={handleLogin} style={styles.LogButton}>
-        <Text style= {{fontSize: 20, textAlign: 'center'}}> Login </Text>
+        <Text style= {styles.LogButtonText}> Login </Text>
       </TouchableOpacity>
       <View style={styles.container1}>
         <TouchableOpacity onPress={handleRestPW}>
@@ -108,6 +108,10 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     height: 35,
     width: 120,
+  },
+  LogButtonText: {
+    fontSize: 20,
+    textAlign: 'center',
   },
   ResetButton: {
     top: -25,

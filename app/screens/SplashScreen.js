@@ -15,7 +15,7 @@ export default class App extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ isLoaded: true });
-    }, 3000);
+    }, 3500);
   }
 
   render() {

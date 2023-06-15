@@ -97,14 +97,15 @@ const DropdownComponent = () => {
         color: 'black',
         textAlign: 'center',
         fontSize: 30,
-        bottom: 70,
+        bottom: 50,
         fontWeight: 'bold'}}>
+
           Check Your Disease. </Text>
       <Text style = {{
         color: 'black',
         fontSize: 15,
-        bottom: 30}}>Choose 6 Unique Symptoms for predicting your disease !!!</Text>
-      <View style={{backgroundColor: '#ffff', padding: 20, borderRadius:15, bottom:8}}>
+        bottom: 20}}>Choose 6 Unique Symptoms for predicting your disease !!!</Text>
+      <View style={{backgroundColor: '#ffff', padding: 20, borderRadius:15}}>
       <Dropdown
         style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
         placeholderStyle={styles.placeholderStyle}

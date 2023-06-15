@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { useNavigation } from '@react-navigation/native';

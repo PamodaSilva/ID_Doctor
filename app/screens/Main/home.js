@@ -72,7 +72,7 @@ const HomePage = () => {
           </View>
           <Image source={require('../../assets/Chat.jpg')} style={styles.Image3} />
         </View>
-        
+
       </ScrollView>
       <View style = { styles.IconContainer}>
         <TouchableOpacity onPress={handleSearch}>
