@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, TextInput } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 import { useNavigation } from '@react-navigation/native';
 
@@ -231,6 +231,10 @@ const DropdownComponent = () => {
           setIsFocus(false);
         }}
       />
+      <TextInput
+        style={styles.dropdown}
+        placeholder="Special Note"
+      />
       <TouchableOpacity  onPress={handleSubmit}
         style= {{
           backgroundColor:'#73C2FB',
@@ -259,11 +263,12 @@ const styles = StyleSheet.create({
   },
   dropdown: {
     height: 50,
-    borderColor: '',
+    borderColor: 'black',
     borderWidth: 0.5,
     borderRadius: 8,
     paddingHorizontal: 8,
-    marginBottom: 10,
+    marginBottom: 15,
+    fontSize: 18,
   },
   icon: {
     marginRight: 5,

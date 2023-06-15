@@ -10,7 +10,6 @@ import DocChat from './screens/Main/DocChat';
 import PredictDisease from './screens/Main/PredictDisease';
 import PredictDisease2 from './screens/Main/PredictDisease2';
 import Profile from './screens/Main/Profile';
-//import TabNavigationBar from './navigation/TabNavigationBar';
 import Login from './screens/Login';
 import SignUp from './screens/Register Page';
 import ResetPW from './screens/ResetPW';

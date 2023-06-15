@@ -21,7 +21,7 @@ const LoginScreen = () => {
       Alert.alert('Success!..', ' Login successfully !!', [
         {text: 'ok.'},
       ]);
-          navigation.navigate('PredictDisease');
+          navigation.navigate('Home');
     } else {
       setEmail('');
       setPassword('');
@@ -106,8 +106,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     backgroundColor: '#87CEFA',
     borderRadius: 5,
-    height: 37,
-    width: 130,
+    height: 35,
+    width: 120,
   },
   ResetButton: {
     top: -25,
