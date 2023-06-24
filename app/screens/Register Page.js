@@ -30,7 +30,7 @@ const SignupScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.RMainText}> Reset Your Password </Text>
+      <Text style={styles.RMainText}> Register </Text>
       <Image source={require('../assets/Register.png')} style={styles.ReImage} />
       <TextInput
         style={styles.input}
